@@ -405,9 +405,50 @@
   }
 
   /* ============================================================
+     CLEAN URL & DUAL-ENVIRONMENT LINK HANDLER
+     ============================================================ */
+  function initLinkHandler() {
+    if (window.location.protocol.startsWith('http')) {
+      // On web server / Vercel: Guarantee extensionless clean URLs
+      document.querySelectorAll('a[href]').forEach(a => {
+        const h = a.getAttribute('href');
+        if (!h || h.startsWith('http') || h.startsWith('//') || h.startsWith('#') || h.startsWith('mailto:') || h.startsWith('tel:') || h.startsWith('javascript:')) return;
+        if (h === 'index.html' || h === './index.html' || h === '/index.html' || h === '../index.html') {
+          a.setAttribute('href', '/');
+        } else if (h.endsWith('.html')) {
+          let clean = h.replace(/\.html$/, '');
+          if (clean.startsWith('./')) clean = clean.substring(1);
+          if (clean.startsWith('../')) clean = '/' + clean.replace(/^\.\.\//, '');
+          if (!clean.startsWith('/')) clean = '/' + clean;
+          a.setAttribute('href', clean);
+        }
+      });
+    } else if (window.location.protocol === 'file:') {
+      // In local file:// mode: convert root-relative clean links to local relative .html paths
+      const path = window.location.pathname.replace(/\\/g, '/');
+      const parts = path.split('/').filter(Boolean);
+      const rootIdx = parts.indexOf('website-maklon');
+      const depth = rootIdx >= 0 ? parts.length - rootIdx - 1 : 0;
+      const base = depth <= 1 ? './' : '../'.repeat(depth - 1);
+
+      document.querySelectorAll('a[href^="/"]').forEach(a => {
+        const h = a.getAttribute('href');
+        if (h.startsWith('//')) return;
+        if (h === '/' || h === '/index' || h === '/index.html') {
+          a.setAttribute('href', base + 'index.html');
+        } else {
+          const clean = h.replace(/^\//, '').replace(/\.html$/, '');
+          a.setAttribute('href', base + clean + '.html');
+        }
+      });
+    }
+  }
+
+  /* ============================================================
      INIT ALL
      ============================================================ */
   function init() {
+    initLinkHandler();
     initScrollReveal();
     initCounters();
     initFAQ();

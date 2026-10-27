@@ -17,6 +17,9 @@
   }
 
   const BASE = getBasePath();
+  const isHttp = window.location.protocol.startsWith('http');
+  const HOME_URL = isHttp ? '/' : (BASE + 'index.html');
+  const resolveUrl = (sub) => (isHttp ? ('/' + sub) : (BASE + sub + '.html'));
 
   const SITE = {
     name:    'Glowmaklon',
@@ -32,21 +35,21 @@
 
   const FOOTER_DATA = {
     menu: [
-      { label: 'Beranda',        url: BASE + 'index.html' },
-      { label: 'Tentang Kami',   url: BASE + 'tentang-kami.html' },
-      { label: 'Katalog Produk', url: BASE + 'produk.html' },
-      { label: 'Paket Maklon',   url: BASE + 'paket.html' },
-      { label: 'Galeri',         url: BASE + 'galeri.html' },
-      { label: 'Blog',           url: BASE + 'blog.html' },
+      { label: 'Beranda',        url: HOME_URL },
+      { label: 'Tentang Kami',   url: resolveUrl('tentang-kami') },
+      { label: 'Katalog Produk', url: resolveUrl('produk') },
+      { label: 'Paket Maklon',   url: resolveUrl('paket') },
+      { label: 'Galeri',         url: resolveUrl('galeri') },
+      { label: 'Blog',           url: resolveUrl('blog') },
     ],
     layanan: [
-      { label: 'Semua Layanan',     url: BASE + 'layanan.html' },
-      { label: 'Maklon Skincare',   url: BASE + 'layanan/maklon-skincare.html' },
-      { label: 'Maklon Kosmetik',   url: BASE + 'layanan/maklon-kosmetik.html' },
-      { label: 'Maklon Bodycare',   url: BASE + 'layanan/maklon-bodycare.html' },
-      { label: 'Maklon Haircare',   url: BASE + 'layanan/maklon-haircare.html' },
-      { label: 'Maklon Parfum',     url: BASE + 'layanan/maklon-parfum.html'   },
-      { label: "Maklon Men's Care", url: BASE + 'layanan/maklon-mens-care.html'},
+      { label: 'Semua Layanan',     url: resolveUrl('layanan') },
+      { label: 'Maklon Skincare',   url: resolveUrl('layanan/maklon-skincare') },
+      { label: 'Maklon Kosmetik',   url: resolveUrl('layanan/maklon-kosmetik') },
+      { label: 'Maklon Bodycare',   url: resolveUrl('layanan/maklon-bodycare') },
+      { label: 'Maklon Haircare',   url: resolveUrl('layanan/maklon-haircare') },
+      { label: 'Maklon Parfum',     url: resolveUrl('layanan/maklon-parfum')   },
+      { label: "Maklon Men's Care", url: resolveUrl('layanan/maklon-mens-care')},
     ],
     socials: [
       {
@@ -127,7 +130,7 @@
       <div class="footer-bottom container">
         <p class="footer-copyright">© ${SITE.year} ${SITE.name}. Hak cipta dilindungi undang-undang.</p>
         <div class="footer-bottom-links">
-          <a href="${BASE}sitemap.xml" class="footer-bottom-link" target="_blank" rel="noopener">Sitemap XML</a>
+          <a href="${isHttp ? '/sitemap.xml' : BASE + 'sitemap.xml'}" class="footer-bottom-link" target="_blank" rel="noopener">Sitemap XML</a>
         </div>
       </div>
     `;

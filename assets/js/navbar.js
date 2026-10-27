@@ -26,56 +26,59 @@
   }
 
   const BASE = getBasePath();
+  const isHttp = window.location.protocol.startsWith('http');
+  const HOME_URL = isHttp ? '/' : (BASE + 'index.html');
+  const resolveUrl = (sub) => (isHttp ? ('/' + sub) : (BASE + sub + '.html'));
 
   /* ── Config ── */
   const SITE = {
     name:    'Glowmaklon',
     wa:      'https://wa.me/6281234567890?text=Halo%20Glowmaklon%2C%20saya%20ingin%20konsultasi.',
     ctaText: 'Konsultasi Gratis',
-    ctaUrl:  BASE + 'kontak.html',
+    ctaUrl:  resolveUrl('tentang-kami'),
   };
 
   /* ── Navigation Data ── */
   const NAV_ITEMS = [
-    { label: 'Beranda',       url: BASE + 'index.html' },
-    { label: 'Tentang Kami',  url: BASE + 'tentang-kami.html' },
+    { label: 'Beranda',       url: HOME_URL },
+    { label: 'Tentang Kami',  url: resolveUrl('tentang-kami') },
     {
       label: 'Layanan',
       children: [
-        { label: 'Semua Layanan',     url: BASE + 'layanan.html',                   icon: 'sparkle' },
-        { label: 'Maklon Skincare',   url: BASE + 'layanan/maklon-skincare.html',   icon: 'leaf'    },
-        { label: 'Maklon Kosmetik',   url: BASE + 'layanan/maklon-kosmetik.html',   icon: 'sparkle' },
-        { label: 'Maklon Bodycare',   url: BASE + 'layanan/maklon-bodycare.html',   icon: 'drop'    },
-        { label: 'Maklon Haircare',   url: BASE + 'layanan/maklon-haircare.html',   icon: 'wind'    },
-        { label: 'Maklon Parfum',     url: BASE + 'layanan/maklon-parfum.html',     icon: 'flower'  },
-        { label: "Maklon Men's Care", url: BASE + 'layanan/maklon-mens-care.html',  icon: 'shield'  },
+        { label: 'Semua Layanan',     url: resolveUrl('layanan'),                   icon: 'sparkle' },
+        { label: 'Maklon Skincare',   url: resolveUrl('layanan/maklon-skincare'),   icon: 'leaf'    },
+        { label: 'Maklon Kosmetik',   url: resolveUrl('layanan/maklon-kosmetik'),   icon: 'sparkle' },
+        { label: 'Maklon Bodycare',   url: resolveUrl('layanan/maklon-bodycare'),   icon: 'drop'    },
+        { label: 'Maklon Haircare',   url: resolveUrl('layanan/maklon-haircare'),   icon: 'wind'    },
+        { label: 'Maklon Parfum',     url: resolveUrl('layanan/maklon-parfum'),     icon: 'flower'  },
+        { label: "Maklon Men's Care", url: resolveUrl('layanan/maklon-mens-care'),  icon: 'shield'  },
       ],
     },
     {
       label: 'Produk',
       children: [
-        { label: 'Semua Produk',     url: BASE + 'produk.html',                  icon: 'box'     },
-        { label: 'Skincare Cream',   url: BASE + 'produk/skincare-cream.html',   icon: 'jar'     },
-        { label: 'Face Serum',       url: BASE + 'produk/face-serum.html',       icon: 'dropper' },
-        { label: 'Facial Wash',      url: BASE + 'produk/facial-wash.html',      icon: 'bubble'  },
-        { label: 'Sunscreen SPF 50', url: BASE + 'produk/sunscreen-spf50.html',  icon: 'sun'     },
-        { label: 'Hydrating Toner',  url: BASE + 'produk/hydrating-toner.html',  icon: 'water'   },
-        { label: 'Body Lotion',      url: BASE + 'produk/body-lotion.html',      icon: 'heart'   },
+        { label: 'Semua Produk',     url: resolveUrl('produk'),                  icon: 'box'     },
+        { label: 'Skincare Cream',   url: resolveUrl('produk/skincare-cream'),   icon: 'jar'     },
+        { label: 'Face Serum',       url: resolveUrl('produk/face-serum'),       icon: 'dropper' },
+        { label: 'Facial Wash',      url: resolveUrl('produk/facial-wash'),      icon: 'bubble'  },
+        { label: 'Sunscreen SPF 50', url: resolveUrl('produk/sunscreen-spf50'),  icon: 'sun'     },
+        { label: 'Hydrating Toner',  url: resolveUrl('produk/hydrating-toner'),  icon: 'water'   },
+        { label: 'Body Lotion',      url: resolveUrl('produk/body-lotion'),      icon: 'heart'   },
       ],
     },
     {
       label: 'Paket',
       children: [
-        { label: 'Semua Paket',               url: BASE + 'paket.html',                     icon: 'star'   },
-        { label: 'Paket Brand Pemula',        url: BASE + 'paket/brand-pemula.html',        icon: 'rocket' },
-        { label: 'Paket Skincare Basic',      url: BASE + 'paket/skincare-basic.html',      icon: 'star'   },
-        { label: 'Paket Skincare Complete',   url: BASE + 'paket/skincare-complete.html',   icon: 'crown'  },
-        { label: 'Paket Bodycare Series',     url: BASE + 'paket/bodycare-series.html',     icon: 'box'    },
-        { label: 'Paket Special Acne Series', url: BASE + 'paket/special-acne-series.html', icon: 'check'  },
+        { label: 'Semua Paket',               url: resolveUrl('paket'),                     icon: 'star'   },
+        { label: 'Paket Brand Pemula',        url: resolveUrl('paket/brand-pemula'),        icon: 'rocket' },
+        { label: 'Paket Skincare Basic',      url: resolveUrl('paket/skincare-basic'),      icon: 'star'   },
+        { label: 'Paket Skincare Complete',   url: resolveUrl('paket/skincare-complete'),   icon: 'crown'  },
+        { label: 'Paket Bodycare Series',     url: resolveUrl('paket/bodycare-series'),     icon: 'box'    },
+        { label: 'Paket Special Acne Series', url: resolveUrl('paket/special-acne-series'), icon: 'check'  },
       ],
     },
-    { label: 'Galeri', url: BASE + 'galeri.html' },
-    { label: 'Blog',   url: BASE + 'blog.html'   },
+    { label: 'Galeri', url: resolveUrl('galeri') },
+    { label: 'Blog',   url: resolveUrl('blog')   },
   ];
 
   /* ── Icon SVG map ── */
@@ -148,7 +151,7 @@
   }
 
   function buildNavbarHTML() {
-    const logoHref = BASE + 'index.html';
+    const logoHref = HOME_URL;
     return `
       <div class="navbar-inner container">
         <a href="${logoHref}" class="navbar-logo" aria-label="${SITE.name} - Beranda">
@@ -180,7 +183,14 @@
   function isHomePage() {
     const p = window.location.pathname.replace(/\\/g, '/');
     const fn = p.substring(p.lastIndexOf('/') + 1);
-    return (fn === '' || fn === 'index.html') && !p.includes('/layanan/') && !p.includes('/produk/') && !p.includes('/paket/') && !p.includes('/blog/');
+    const clean = fn.replace(/\.html$/, '');
+    return (clean === '' || clean === 'index') &&
+      !p.includes('/layanan') &&
+      !p.includes('/produk') &&
+      !p.includes('/paket') &&
+      !p.includes('/blog') &&
+      !p.includes('/tentang-kami') &&
+      !p.includes('/galeri');
   }
 
   function initNavbar() {
@@ -305,8 +315,9 @@
 
     // Active link highlight (strictly matching current section)
     const currentPath = window.location.pathname.replace(/\\/g, '/');
-    const filename = currentPath.substring(currentPath.lastIndexOf('/') + 1) || 'index.html';
-    const isHome = (filename === '' || filename === 'index.html') && !currentPath.includes('/layanan/') && !currentPath.includes('/produk/') && !currentPath.includes('/paket/') && !currentPath.includes('/blog/');
+    const filename = currentPath.substring(currentPath.lastIndexOf('/') + 1) || 'index';
+    const cleanFn = filename.replace(/\.html$/, '');
+    const isHome = isHomePage();
 
     el.querySelectorAll('.nav-link, .nav-dropdown-item, .mobile-nav-link, .mobile-subnav-link').forEach(a => {
       a.classList.remove('active');
@@ -318,17 +329,17 @@
       });
     } else {
       let activeSection = '';
-      if (currentPath.includes('/layanan/') || filename === 'layanan.html') {
+      if (currentPath.includes('/layanan') || cleanFn === 'layanan') {
         activeSection = 'Layanan';
-      } else if (currentPath.includes('/produk/') || filename === 'produk.html') {
+      } else if (currentPath.includes('/produk') || cleanFn === 'produk') {
         activeSection = 'Produk';
-      } else if (currentPath.includes('/paket/') || filename === 'paket.html') {
+      } else if (currentPath.includes('/paket') || cleanFn === 'paket') {
         activeSection = 'Paket';
-      } else if (currentPath.includes('/blog/') || filename === 'blog.html') {
+      } else if (currentPath.includes('/blog') || cleanFn === 'blog') {
         activeSection = 'Blog';
-      } else if (filename === 'tentang-kami.html') {
+      } else if (cleanFn === 'tentang-kami') {
         activeSection = 'Tentang Kami';
-      } else if (filename === 'galeri.html') {
+      } else if (cleanFn === 'galeri') {
         activeSection = 'Galeri';
       }
 
@@ -349,8 +360,14 @@
 
       // Highlight active item in dropdown or subnav if on detail page
       el.querySelectorAll('.nav-dropdown-item, .mobile-subnav-link').forEach(a => {
-        const href = a.getAttribute('href') || '';
-        if (href.endsWith(filename)) {
+        const href = (a.getAttribute('href') || '').replace(/\.html$/, '');
+        if (cleanFn && href.endsWith(cleanFn) && cleanFn !== 'layanan' && cleanFn !== 'produk' && cleanFn !== 'paket' && cleanFn !== 'blog') {
+          a.classList.add('active');
+        } else if (cleanFn === 'layanan' && (href === '/layanan' || href.endsWith('/layanan.html'))) {
+          a.classList.add('active');
+        } else if (cleanFn === 'produk' && (href === '/produk' || href.endsWith('/produk.html'))) {
+          a.classList.add('active');
+        } else if (cleanFn === 'paket' && (href === '/paket' || href.endsWith('/paket.html'))) {
           a.classList.add('active');
         }
       });
