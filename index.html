@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Glowmaklon — Jasa maklon kecantikan terpercaya bersertifikasi BPOM & Halal. Formula custom, MOQ rendah, pengiriman cepat. Konsultasi gratis sekarang!" />
+  <meta name="keywords" content="maklon kecantikan, maklon skincare, maklon kosmetik, jasa maklon, private label kosmetik, maklon BPOM" />
+  <meta property="og:title" content="Glowmaklon | Maklon Kecantikan Bersertifikasi BPOM & Halal" />
+  <meta property="og:description" content="Wujudkan brand kecantikan impianmu bersama Glowmaklon. MOQ rendah, formula custom, bersertifikasi BPOM." />
+  <meta property="og:type" content="website" />
+  <title>Glowmaklon | Maklon Kecantikan Bersertifikasi BPOM & Halal</title>
+  <link rel="canonical" href="https://glowmaklon.com/" />
+
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:wght@600;700&display=swap" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+  <style>
+    /* ── Hero Section (Fitted to 1 Screen Height) ── */
+    .hero {
+      height: 100vh;
+      min-height: 560px;
+      max-height: 960px;
+      background: linear-gradient(135deg, #0a1a11 0%, #0f2b1c 40%, #1a3d28 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--navbar-h);
+      box-sizing: border-box;
+    }
+
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(31,138,76,0.18) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(31,138,76,0.10) 0%, transparent 40%),
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231F8A4C' fill-opacity='0.04'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: var(--space-8);
+      align-items: center;
+      width: 100%;
+      padding-block: 0;
+    }
+
+    .hero-left {
+      color: var(--clr-white);
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.85rem, 3.2vw, 3.2rem);
+      font-weight: var(--fw-bold);
+      color: var(--clr-white) !important;
+      line-height: 1.15;
+      margin-bottom: var(--space-4);
+    }
+
+    .hero-title .highlight {
+      color: #6ee8a0;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-title .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #6ee8a0;
+      border-radius: 2px;
+      opacity: 0.4;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      background: rgba(31,138,76,0.15);
+      border: 1px solid rgba(31,138,76,0.3);
+      color: #6ee8a0;
+      font-size: 11px;
+      font-weight: var(--fw-semibold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-4);
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #6ee8a0;
+      animation: blink 2s ease infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.76);
+      line-height: 1.65;
+      margin-bottom: var(--space-6);
+      max-width: 480px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-6);
+    }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .hero-trust-icon {
+      width: 15px;
+      height: 15px;
+      fill: #6ee8a0;
+    }
+
+    .hero-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-img-wrap {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      width: 100%;
+      max-width: 380px;
+      height: min(390px, calc(100vh - var(--navbar-h) - 100px));
+      aspect-ratio: 1/1;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.12);
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      transition: transform 6s ease;
+    }
+
+    .hero-img-wrap:hover img {
+      transform: scale(1.04);
+    }
+
+    .hero-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,26,17,0.5) 0%, transparent 60%);
+    }
+
+    /* Floating cards on hero image */
+    .hero-float-card {
+      position: absolute;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius-md);
+      padding: 0.5rem 0.85rem;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      animation: float-card 4s ease-in-out infinite;
+      z-index: 3;
+    }
+
+    @keyframes float-card {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .hero-float-card-1 {
+      bottom: -10px;
+      left: -16px;
+      animation-delay: 0s;
+    }
+
+    .hero-float-card-2 {
+      top: -10px;
+      right: -16px;
+      animation-delay: 2s;
+    }
+
+    .hero-float-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: var(--clr-green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .hero-float-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--clr-green);
+      fill: none;
+    }
+
+    .hero-float-text strong {
+      display: block;
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-bold);
+      color: var(--clr-black);
+    }
+
+    .hero-float-text span {
+      font-size: var(--fs-xs);
+      color: var(--clr-text-sec);
+    }
+
+    /* Scroll indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: var(--space-8);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      color: rgba(255,255,255,0.4);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .hero-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4));
+      animation: scroll-line 2s ease infinite;
+    }
+
+    @keyframes scroll-line {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ── About Section ── */
+    .about-section {
+      padding-block: var(--space-20);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-main {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-img-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-img-badge {
+      position: absolute;
+      bottom: calc(-1 * var(--space-6));
+      right: calc(-1 * var(--space-4));
+      background: var(--clr-green);
+      color: var(--clr-white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5) var(--space-6);
+      text-align: center;
+      box-shadow: var(--shadow-green);
+    }
+
+    .about-img-badge strong {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: var(--fs-3xl);
+      font-weight: var(--fw-bold);
+      line-height: 1;
+    }
+
+    .about-img-badge span {
+      font-size: var(--fs-xs);
+      opacity: 0.85;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-block: var(--space-8);
+      padding: var(--space-6);
+      background: var(--clr-bg-alt);
+      border-radius: var(--radius-lg);
+    }
+
+    .about-stat-item {
+      text-align: center;
+    }
+
+    .about-stat-num {
+      font-family: var(--font-serif);
+      font-size: var(--fs-3xl);
+      font-weight: var(--fw-bold);
+      color: var(--clr-green);
+      line-height: 1;
+      margin-bottom: var(--space-1);
+    }
+
+    .about-stat-label {
+      font-size: var(--fs-xs);
+      color: var(--clr-text-sec);
+      font-weight: var(--fw-medium);
+    }
+
+    .about-stat-divider {
+      width: 1px;
+      background: var(--clr-border);
+      margin-block: auto;
+    }
+
+    /* ── Features / Keunggulan ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+
+    .feature-card {
+      background: var(--clr-white);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--clr-green);
+      transform: scaleX(0);
+      transition: transform var(--transition-normal);
+    }
+
+    .feature-card:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow-green);
+      transform: translateY(-6px);
+    }
+
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .feature-icon-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--clr-green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-5);
+      transition: background var(--transition-normal);
+    }
+
+    .feature-card:hover .feature-icon-wrap {
+      background: var(--clr-green);
+    }
+
+    .feature-icon-wrap svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--clr-green);
+      fill: none;
+      transition: stroke var(--transition-normal);
+    }
+
+    .feature-card:hover .feature-icon-wrap svg {
+      stroke: var(--clr-white);
+    }
+
+    .feature-card h3 {
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-bold);
+      margin-bottom: var(--space-3);
+      color: var(--clr-black);
+    }
+
+    .feature-card p {
+      font-size: var(--fs-sm);
+      color: var(--clr-text-sec);
+      line-height: var(--lh-loose);
+    }
+
+    .feature-card-num {
+      position: absolute;
+      top: var(--space-5);
+      right: var(--space-5);
+      font-size: 3.5rem;
+      font-weight: var(--fw-extrabold);
+      color: var(--clr-border);
+      font-family: var(--font-serif);
+      line-height: 1;
+      transition: color var(--transition-normal);
+      user-select: none;
+    }
+
+    .feature-card:hover .feature-card-num {
+      color: rgba(31,138,76,0.1);
+    }
+
+    /* ── Packages Section ── */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-bottom: var(--space-10);
+    }
+
+    .package-card {
+      background: var(--clr-white);
+      border: 2px solid var(--clr-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      position: relative;
+      transition: all var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-card.featured {
+      border-color: var(--clr-green);
+      background: linear-gradient(160deg, var(--clr-green) 0%, var(--clr-green-dark) 100%);
+      color: var(--clr-white);
+      transform: scale(1.02);
+      box-shadow: var(--shadow-green);
+    }
+
+    .package-card:not(.featured):hover {
+      border-color: var(--clr-green);
+      box-shadow: var(--shadow-green);
+      transform: translateY(-4px);
+    }
+
+    .package-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #F5A623;
+      color: var(--clr-black);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      padding: 0.25rem 1rem;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+    }
+
+    .package-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-4);
+    }
+
+    .package-card:not(.featured) .package-icon {
+      background: var(--clr-green-light);
+    }
+
+    .package-icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--clr-white);
+      fill: none;
+    }
+
+    .package-card:not(.featured) .package-icon svg {
+      stroke: var(--clr-green);
+    }
+
+    .package-name {
+      font-family: var(--font-serif);
+      font-size: var(--fs-xl);
+      font-weight: var(--fw-bold);
+      margin-bottom: var(--space-2);
+    }
+
+    .package-card.featured .package-name { color: var(--clr-white); }
+
+    .package-tagline {
+      font-size: var(--fs-sm);
+      margin-bottom: var(--space-5);
+      opacity: 0.75;
+    }
+
+    .package-price-label {
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.6;
+      margin-bottom: var(--space-1);
+    }
+
+    .package-price {
+      font-family: var(--font-serif);
+      font-size: var(--fs-3xl);
+      font-weight: var(--fw-bold);
+      color: var(--clr-green);
+      margin-bottom: var(--space-6);
+    }
+
+    .package-card.featured .package-price {
+      color: #6ee8a0;
+    }
+
+    .package-divider {
+      height: 1px;
+      background: var(--clr-border);
+      margin-bottom: var(--space-6);
+    }
+
+    .package-card.featured .package-divider {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .package-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      flex: 1;
+      margin-bottom: var(--space-8);
+    }
+
+    .package-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      font-size: var(--fs-sm);
+      color: var(--clr-text-sec);
+    }
+
+    .package-card.featured .package-features li {
+      color: rgba(255,255,255,0.85);
+    }
+
+    .package-check {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--clr-green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .package-card.featured .package-check {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .package-check svg {
+      width: 10px;
+      height: 10px;
+      stroke: var(--clr-green);
+      fill: none;
+    }
+
+    .package-card.featured .package-check svg {
+      stroke: var(--clr-white);
+    }
+
+    .package-cta {
+      margin-top: auto;
+    }
+
+    /* ── Products Section ── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-bottom: var(--space-10);
+    }
+
+    .product-card {
+      background: var(--clr-white);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    .product-card:hover {
+      border-color: var(--clr-green);
+      box-shadow: var(--shadow-green);
+      transform: translateY(-6px);
+    }
+
+    .product-img-wrap {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.07);
+    }
+
+    .product-category-tag {
+      position: absolute;
+      top: var(--space-4);
+      left: var(--space-4);
+      background: rgba(31,138,76,0.9);
+      color: white;
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-semibold);
+      padding: 0.2rem 0.65rem;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(4px);
+    }
+
+    .product-body {
+      padding: var(--space-5) var(--space-6);
+    }
+
+    .product-name {
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-bold);
+      margin-bottom: var(--space-2);
+    }
+
+    .product-desc {
+      font-size: var(--fs-sm);
+      color: var(--clr-text-sec);
+      line-height: var(--lh-loose);
+      margin-bottom: var(--space-4);
+    }
+
+    .product-moq {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--fs-xs);
+      color: var(--clr-text-sec);
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--clr-border);
+    }
+
+    .product-moq svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--clr-green);
+      fill: none;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: var(--space-4);
+    }
+
+    .product-price {
+      font-family: var(--font-serif);
+      font-size: var(--fs-xl);
+      font-weight: var(--fw-bold);
+      color: var(--clr-green);
+    }
+
+    .product-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-semibold);
+      color: var(--clr-green);
+      transition: gap var(--transition-fast);
+    }
+
+    .product-link:hover {
+      gap: var(--space-2);
+    }
+
+    .product-link svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+    }
+
+    /* ── Testimonials Section ── */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+
+    /* ── FAQ Section ── */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: var(--space-16);
+      align-items: start;
+    }
+
+    .faq-contact-box {
+      margin-top: var(--space-8);
+      background: var(--clr-green-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      border-left: 4px solid var(--clr-green);
+    }
+
+    .faq-contact-box h4 {
+      font-weight: var(--fw-bold);
+      margin-bottom: var(--space-2);
+      font-size: var(--fs-base);
+    }
+
+    .faq-contact-box p {
+      font-size: var(--fs-sm);
+      color: var(--clr-text-sec);
+      margin-bottom: var(--space-4);
+    }
+
+    /* ── Hero Mobile ── */
+    @media (max-width: 1024px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+        text-align: center;
+      }
+
+      .hero-subtitle,
+      .hero-title .highlight::after { margin-inline: auto; }
+
+      .hero-cta-group,
+      .hero-trust { justify-content: center; }
+
+      .hero-right { max-width: 480px; margin-inline: auto; }
+
+      .hero-float-card-1 { left: var(--space-4); bottom: var(--space-4); }
+      .hero-float-card-2 { right: var(--space-4); top: var(--space-4); }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+      }
+
+      .about-img-badge {
+        right: var(--space-4);
+        bottom: calc(-1 * var(--space-4));
+      }
+
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .packages-grid { grid-template-columns: 1fr; max-width: 500px; margin-inline: auto; }
+      .package-card.featured { transform: none; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-content { padding-block: var(--space-12); }
+      .features-grid { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2rem; }
+      .hero-float-card-2 { display: none; }
+      .about-stats { grid-template-columns: 1fr; }
+    }
+
+    /* Packages center button */
+    .section-cta-center {
+      text-align: center;
+      margin-top: var(--space-2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Overlay (mobile menu backdrop) -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" aria-label="Navigasi utama"></nav>
+
+  <main id="main-content">
+
+    <!-- ════════════════════════════════════════
+         SECTION 1 — HERO
+    ════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg-pattern" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-content">
+
+          <!-- Left: Text -->
+          <div class="hero-left">
+            <div class="hero-badge">
+              <span class="hero-badge-dot" aria-hidden="true"></span>
+              Mitra Maklon Kecantikan Terpercaya
+            </div>
+
+            <h1 class="hero-title" id="hero-title">
+              Wujudkan Brand<br>
+              Kecantikanmu dengan<br>
+              <span class="highlight">Formula Premium</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Dari ide menjadi produk siap jual. Glowmaklon hadir sebagai mitra maklon kecantikan bersertifikasi BPOM, CPKB, dan Halal — dengan MOQ rendah, formula custom, dan pengiriman tepat waktu.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="https://wa.me/6281234567890?text=Halo%20Glowmaklon%2C%20saya%20ingin%20konsultasi%20maklon." target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="hero-cta-konsultasi">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.16v1.76z"/></svg>
+                Konsultasi Gratis
+              </a>
+              <a href="./layanan/maklon-skincare.html" class="btn btn-outline-white btn-lg" id="hero-cta-layanan">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                Lihat Layanan
+              </a>
+            </div>
+
+            <div class="hero-trust" aria-label="Kepercayaan klien">
+              <div class="hero-trust-item">
+                <svg class="hero-trust-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Bersertifikasi BPOM
+              </div>
+              <div class="hero-trust-item" aria-hidden="true" style="color:rgba(255,255,255,0.2)">•</div>
+              <div class="hero-trust-item">
+                <svg class="hero-trust-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Halal MUI
+              </div>
+              <div class="hero-trust-item" aria-hidden="true" style="color:rgba(255,255,255,0.2)">•</div>
+              <div class="hero-trust-item">
+                <svg class="hero-trust-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                500+ Brand Aktif
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Image -->
+          <div class="hero-right">
+            <div class="hero-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&auto=format&fit=crop&q=80"
+                alt="Produk kecantikan premium hasil maklon Glowmaklon"
+                width="800"
+                height="1000"
+                loading="eager"
+                fetchpriority="high"
+              />
+              <div class="hero-img-overlay" aria-hidden="true"></div>
+            </div>
+
+            <!-- Float card: BPOM (Bottom) -->
+            <div class="hero-float-card hero-float-card-1" aria-hidden="true">
+              <div class="hero-float-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="hero-float-text">
+                <strong>BPOM Certified</strong>
+                <span>Standar keamanan terjamin</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /hero-content -->
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         SECTION 2 — TENTANG KAMI (Ringkas)
+    ════════════════════════════════════════ -->
+    <section class="about-section" id="tentang-kami" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Image -->
+          <div class="about-img-wrap reveal-left">
+            <div class="about-img-main">
+              <img
+                src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&auto=format&fit=crop&q=80"
+                alt="Laboratorium riset dan pengembangan formula Glowmaklon"
+                width="800"
+                height="600"
+                loading="lazy"
+              />
+            </div>
+            <div class="about-img-badge" aria-label="Berdiri sejak 2011">
+              <strong>12+</strong>
+              <span>Tahun<br>Pengalaman</span>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="reveal-right">
+            <p class="section-label">Tentang Kami</p>
+            <h2 class="section-title" id="about-title">
+              Mitra Terpercaya untuk<br>Brand Kecantikanmu
+            </h2>
+            <p style="color:var(--clr-text-sec);line-height:var(--lh-loose);margin-bottom:var(--space-4);">
+              Glowmaklon adalah perusahaan jasa maklon kecantikan yang berdiri sejak 2011 di Jakarta. Kami mengkhususkan diri dalam pengembangan dan produksi produk skincare, kosmetik, bodycare, haircare, parfum, hingga men's care — dengan standar kualitas internasional yang telah mendapatkan sertifikasi BPOM, CPKB, dan Halal MUI.
+            </p>
+            <p style="color:var(--clr-text-sec);line-height:var(--lh-loose);margin-bottom:var(--space-8);">
+              Bersama tim R&D berpengalaman, kami membantu ratusan brand dari nol hingga siap dipasarkan — mulai dari formulasi, kemasan, legalitas, hingga pengiriman ke seluruh Indonesia.
+            </p>
+
+            <!-- Stats -->
+            <div class="about-stats stagger-children" role="list">
+              <div class="about-stat-item" role="listitem">
+                <div class="about-stat-num" data-counter data-target="12" data-suffix="+">12+</div>
+                <div class="about-stat-label">Tahun Pengalaman</div>
+              </div>
+              <div class="about-stat-divider" aria-hidden="true"></div>
+              <div class="about-stat-item" role="listitem">
+                <div class="about-stat-num" data-counter data-target="500" data-suffix="+">500+</div>
+                <div class="about-stat-label">Brand Aktif</div>
+              </div>
+              <div class="about-stat-divider" aria-hidden="true"></div>
+              <div class="about-stat-item" role="listitem">
+                <div class="about-stat-num" data-counter data-target="1200" data-suffix="+">1200+</div>
+                <div class="about-stat-label">Formula Tersedia</div>
+              </div>
+            </div>
+
+            <a href="./tentang-kami.html" class="btn btn-primary" id="about-selengkapnya-btn">
+              Selengkapnya
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         SECTION 3 — KEUNGGULAN
+    ════════════════════════════════════════ -->
+    <section class="section-alt" id="keunggulan" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head centered reveal">
+          <p class="section-label">Mengapa Memilih Kami</p>
+          <h2 class="section-title" id="features-title">Keunggulan Glowmaklon</h2>
+          <p class="section-subtitle">Kami memadukan inovasi, teknologi, dan komitmen kualitas untuk memastikan brand kecantikanmu tampil terbaik di pasaran.</p>
+        </div>
+
+        <div class="features-grid stagger-children">
+
+          <!-- 1 -->
+          <div class="feature-card">
+            <span class="feature-card-num" aria-hidden="true">01</span>
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Bersertifikasi BPOM & Halal</h3>
+            <p>Semua produk kami telah mendapatkan izin edar BPOM, sertifikat CPKB GMP, dan sertifikasi Halal MUI — menjamin keamanan dan kehalalan produk brandmu.</p>
+          </div>
+
+          <!-- 2 -->
+          <div class="feature-card">
+            <span class="feature-card-num" aria-hidden="true">02</span>
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.07"/><path d="M7.07 14.94c-1.66 0-2.72 1.44-2.72 1.44S6.56 22 11.99 22c.32-2.96.59-4.5.59-6.89"/></svg>
+            </div>
+            <h3>Formula Custom 100%</h3>
+            <p>Tim R&D kami siap mengembangkan formula eksklusif sesuai kebutuhan dan target pasar brandmu — dari tekstur, aroma, hingga kandungan aktif spesifik.</p>
+          </div>
+
+          <!-- 3 -->
+          <div class="feature-card">
+            <span class="feature-card-num" aria-hidden="true">03</span>
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>MOQ Rendah & Fleksibel</h3>
+            <p>Mulai dari 500 pcs per produk — cocok untuk brand pemula yang ingin memulai tanpa risiko stok berlebih. Skalakan sesuai pertumbuhan bisnismu.</p>
+          </div>
+
+          <!-- 4 -->
+          <div class="feature-card">
+            <span class="feature-card-num" aria-hidden="true">04</span>
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 2C6 9 4 13.5 4 16a8 8 0 0 0 16 0c0-2.5-2-7-8-14z"/></svg>
+            </div>
+            <h3>Bahan Baku Berkualitas</h3>
+            <p>Kami menggunakan bahan baku impor dan lokal pilihan yang telah tersertifikasi — termasuk bahan aktif botanical, marine, dan teknologi terkini dari Eropa & Asia.</p>
+          </div>
+
+          <!-- 5 -->
+          <div class="feature-card">
+            <span class="feature-card-num" aria-hidden="true">05</span>
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            </div>
+            <h3>Tim R&D Berpengalaman</h3>
+            <p>Lebih dari 25 formulator dan cosmetologist berpengalaman siap mendampingi proses pengembangan produkmu dari konsep hingga produk jadi yang siap dipasarkan.</p>
+          </div>
+
+          <!-- 6 -->
+          <div class="feature-card">
+            <span class="feature-card-num" aria-hidden="true">06</span>
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3>Pengiriman Tepat Waktu</h3>
+            <p>Sistem produksi terstruktur memastikan produkmu selesai sesuai jadwal yang disepakati — dengan pengiriman ke seluruh Indonesia dan ekspor ke luar negeri.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         SECTION 4 — PAKET HARGA (3 kartu)
+    ════════════════════════════════════════ -->
+    <section id="paket" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="section-head centered reveal">
+          <p class="section-label">Paket Harga</p>
+          <h2 class="section-title" id="packages-title">Pilih Paket yang Tepat</h2>
+          <p class="section-subtitle">Paket dirancang khusus untuk berbagai tahap pertumbuhan bisnismu — dari brand baru hingga brand yang ingin ekspansi.</p>
+        </div>
+
+        <div class="packages-grid stagger-children">
+
+          <!-- Paket 1: Brand Pemula -->
+          <div class="package-card">
+            <div class="package-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.07"/></svg>
+            </div>
+            <h3 class="package-name">Brand Pemula</h3>
+            <p class="package-tagline">Sempurna untuk memulai brand pertamamu</p>
+            <p class="package-price-label">Harga mulai dari</p>
+            <p class="package-price">Rp 15 Juta</p>
+            <div class="package-divider" aria-hidden="true"></div>
+            <ul class="package-features">
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                2 jenis produk pilihan
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                MOQ 500 pcs/produk
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Formula dari library ready
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Desain label & kemasan
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Pengurusan izin edar BPOM
+              </li>
+            </ul>
+            <div class="package-cta">
+              <a href="./paket/brand-pemula.html" class="btn btn-outline" style="width:100%;justify-content:center;" id="pkg-pemula-btn">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Paket 2: Skincare Basic (FEATURED) -->
+          <div class="package-card featured" aria-label="Paket terpopuler">
+            <div class="package-badge" aria-label="Terpopuler">⭐ Paling Populer</div>
+            <div class="package-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="package-name">Skincare Basic</h3>
+            <p class="package-tagline" style="color:rgba(255,255,255,0.75)">Rangkaian skincare lengkap 3 produk</p>
+            <p class="package-price-label" style="color:rgba(255,255,255,0.6)">Harga mulai dari</p>
+            <p class="package-price">Rp 32 Juta</p>
+            <div class="package-divider" aria-hidden="true"></div>
+            <ul class="package-features">
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                3 produk skincare (cleanser, toner, moisturizer)
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                MOQ 1.000 pcs/produk
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Formula semi-custom
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Full desain packaging
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Legalitas BPOM + Halal
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Konsultasi marketing dasar
+              </li>
+            </ul>
+            <div class="package-cta">
+              <a href="./paket/skincare-basic.html" class="btn btn-white" style="width:100%;justify-content:center;" id="pkg-basic-btn">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Paket 3: Skincare Complete -->
+          <div class="package-card">
+            <div class="package-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="package-name">Skincare Complete</h3>
+            <p class="package-tagline">Paket komprehensif untuk brand premium</p>
+            <p class="package-price-label">Harga mulai dari</p>
+            <p class="package-price">Rp 75 Juta</p>
+            <div class="package-divider" aria-hidden="true"></div>
+            <ul class="package-features">
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                5–7 produk skincare lengkap
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                MOQ fleksibel mulai 2.000 pcs
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Formula full custom eksklusif
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Packaging premium & gift set
+              </li>
+              <li>
+                <span class="package-check"><svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Legalitas BPOM + Halal + SNI
+              </li>
+            </ul>
+            <div class="package-cta">
+              <a href="./paket/skincare-complete.html" class="btn btn-outline" style="width:100%;justify-content:center;" id="pkg-complete-btn">Lihat Detail</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section-cta-center reveal">
+          <a href="./paket.html" class="btn btn-primary btn-lg" id="all-packages-btn">
+            Lihat Semua Paket
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         SECTION 5 — PRODUK UNGGULAN (3)
+    ════════════════════════════════════════ -->
+    <section class="section-alt" id="produk-unggulan" aria-labelledby="products-title">
+      <div class="container">
+        <div class="section-head centered reveal">
+          <p class="section-label">Produk Unggulan</p>
+          <h2 class="section-title" id="products-title">Formulasi Terbaik Kami</h2>
+          <p class="section-subtitle">Produk-produk andalan yang telah dipercaya ratusan brand kecantikan ternama di seluruh Indonesia.</p>
+        </div>
+
+        <div class="products-grid stagger-children">
+
+          <!-- Produk A: Skincare Cream -->
+          <article class="product-card">
+            <div class="product-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=80"
+                alt="Skincare Cream — Produk Maklon Glowmaklon"
+                width="600"
+                height="450"
+                loading="lazy"
+              />
+              <span class="product-category-tag">Skincare</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Skincare Cream</h3>
+              <p class="product-desc">Krim perawatan wajah intensif dengan kandungan niacinamide, hyaluronic acid, dan vitamin C. Cocok untuk semua jenis kulit.</p>
+              <div class="product-moq">
+                <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                MOQ: 500 pcs | Ukuran: 20g – 50g
+              </div>
+              <div class="product-footer">
+                <span class="product-price">Rp 18.000<span style="font-size:var(--fs-sm);font-weight:var(--fw-regular);color:var(--clr-text-sec)">/pcs</span></span>
+                <a href="./produk/skincare-cream.html" class="product-link" id="prod-a-link">
+                  Detail <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produk B: Face Serum -->
+          <article class="product-card">
+            <div class="product-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&auto=format&fit=crop&q=80"
+                alt="Face Serum — Produk Maklon Glowmaklon"
+                width="600"
+                height="450"
+                loading="lazy"
+              />
+              <span class="product-category-tag">Skincare</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Face Serum</h3>
+              <p class="product-desc">Serum wajah berkonsentrasi tinggi dengan teknologi micro-encapsulation. Mencerahkan, melembapkan, dan anti-aging.</p>
+              <div class="product-moq">
+                <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                MOQ: 500 pcs | Ukuran: 10ml – 30ml
+              </div>
+              <div class="product-footer">
+                <span class="product-price">Rp 22.000<span style="font-size:var(--fs-sm);font-weight:var(--fw-regular);color:var(--clr-text-sec)">/pcs</span></span>
+                <a href="./produk/face-serum.html" class="product-link" id="prod-b-link">
+                  Detail <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produk C: Facial Wash -->
+          <article class="product-card">
+            <div class="product-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=600&auto=format&fit=crop&q=80"
+                alt="Facial Wash — Produk Maklon Glowmaklon"
+                width="600"
+                height="450"
+                loading="lazy"
+              />
+              <span class="product-category-tag">Skincare</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Facial Wash</h3>
+              <p class="product-desc">Sabun cuci muka gentle dengan busa lembut, pH-balanced, mengandung ekstrak green tea dan aloe vera untuk kulit bersih segar.</p>
+              <div class="product-moq">
+                <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                MOQ: 500 pcs | Ukuran: 60ml – 150ml
+              </div>
+              <div class="product-footer">
+                <span class="product-price">Rp 14.000<span style="font-size:var(--fs-sm);font-weight:var(--fw-regular);color:var(--clr-text-sec)">/pcs</span></span>
+                <a href="./produk/facial-wash.html" class="product-link" id="prod-c-link">
+                  Detail <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="section-cta-center reveal">
+          <a href="./produk.html" class="btn btn-outline btn-lg" id="all-products-btn">
+            Lihat Semua Produk
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         SECTION 6 — TESTIMONI
+    ════════════════════════════════════════ -->
+    <section id="testimoni" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head centered reveal">
+          <p class="section-label">Testimoni Klien</p>
+          <h2 class="section-title" id="testimonials-title">Cerita Sukses Klien Kami</h2>
+          <p class="section-subtitle">Lebih dari 500 brand telah mempercayakan produk kecantikan mereka kepada Glowmaklon. Ini kata mereka.</p>
+        </div>
+
+        <div class="testimonials-grid stagger-children">
+
+          <!-- Testimoni 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Rating 5 dari 5 bintang">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"Glowmaklon luar biasa! Dari konsultasi awal sampai produk jadi, tim mereka selalu responsif dan profesional. Serum saya sekarang sudah punya ribuan pelanggan setia. Sangat rekomendasikan untuk siapapun yang ingin memulai brand kecantikan!"</p>
+            <div class="testimonial-author">
+              <img
+                class="testimonial-avatar"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80"
+                alt="Foto Siti Rahma"
+                width="48"
+                height="48"
+              />
+              <div>
+                <p class="testimonial-name">Siti Rahma</p>
+                <p class="testimonial-brand">Founder — Lumière Beauty</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimoni 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Rating 5 dari 5 bintang">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"Sebagai pemilik klinik kecantikan, saya butuh produk private label yang berkualitas tinggi. Glowmaklon berhasil mewujudkan itu dengan formula yang melampaui ekspektasi saya. Kini produk kami jadi andalan pasien klinik!"</p>
+            <div class="testimonial-author">
+              <img
+                class="testimonial-avatar"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
+                alt="Foto dr. Kevin Santosa"
+                width="48"
+                height="48"
+                loading="lazy"
+              />
+              <div>
+                <p class="testimonial-name">dr. Kevin Santosa</p>
+                <p class="testimonial-brand">Direktur — Klinik Glow Aesthetic</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimoni 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Rating 5 dari 5 bintang">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"Saya influencer yang baru terjun ke dunia bisnis kosmetik. Glowmaklon membimbing saya dari A sampai Z tanpa ribet. MOQ yang fleksibel sangat membantu untuk tahap awal. Brand saya kini sudah sold out di batch pertama!"</p>
+            <div class="testimonial-author">
+              <img
+                class="testimonial-avatar"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80"
+                alt="Foto Nadya Putri"
+                width="48"
+                height="48"
+                loading="lazy"
+              />
+              <div>
+                <p class="testimonial-name">Nadya Putri</p>
+                <p class="testimonial-brand">Beauty Influencer & Founder — NadGlow</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         SECTION 7 — FAQ
+    ════════════════════════════════════════ -->
+    <section class="section-alt" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="faq-grid">
+
+          <!-- Left: Title + contact box -->
+          <div class="reveal-left">
+            <p class="section-label">FAQ</p>
+            <h2 class="section-title" id="faq-title">Pertanyaan yang Sering Diajukan</h2>
+            <p style="color:var(--clr-text-sec);line-height:var(--lh-loose);margin-bottom:var(--space-4);">
+              Temukan jawaban atas pertanyaan umum seputar layanan maklon kecantikan Glowmaklon di sini.
+            </p>
+
+            <div class="faq-contact-box">
+              <h4>Tidak menemukan jawaban?</h4>
+              <p>Tim kami siap menjawab pertanyaanmu langsung via WhatsApp atau email.</p>
+              <a href="https://wa.me/6281234567890?text=Halo%20Glowmaklon%2C%20saya%20punya%20pertanyaan." class="btn btn-primary btn-sm" target="_blank" rel="noopener" id="faq-wa-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                Tanya via WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Accordion -->
+          <div class="reveal-right">
+            <div class="faq-list" role="list">
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Berapa minimum order (MOQ) untuk maklon di Glowmaklon?
+                  <span class="faq-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </span>
+                </button>
+                <div class="faq-answer">
+                  <div class="faq-answer-inner">
+                    <p>MOQ kami mulai dari <strong>500 pcs per produk</strong> untuk Paket Brand Pemula. Untuk paket lain, MOQ bervariasi mulai dari 1.000 – 2.000 pcs tergantung jenis produk dan kompleksitas formulasi. Kami juga menerima konsultasi untuk kebutuhan MOQ yang lebih kecil pada kondisi tertentu.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Berapa lama proses produksi hingga produk siap kirim?
+                  <span class="faq-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </span>
+                </button>
+                <div class="faq-answer">
+                  <div class="faq-answer-inner">
+                    <p>Estimasi waktu produksi <strong>30–90 hari kerja</strong> tergantung jenis produk dan kompleksitas formula. Untuk produk dari library formula siap pakai: 30–45 hari. Untuk formula custom baru: 60–90 hari (termasuk uji stabilitas dan trial). Pengurusan izin BPOM memerlukan waktu tambahan 3–6 bulan.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Apakah Glowmaklon membantu pengurusan izin BPOM dan Halal?
+                  <span class="faq-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </span>
+                </button>
+                <div class="faq-answer">
+                  <div class="faq-answer-inner">
+                    <p>Ya, kami menyediakan layanan <strong>one-stop solution</strong> termasuk pengurusan izin edar BPOM, sertifikasi Halal MUI, dan dokumen legalitas lainnya. Tim legal kami berpengalaman dalam proses pendaftaran produk kosmetik, sehingga kamu tidak perlu repot mengurus sendiri.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Bisakah saya menggunakan formula dan kemasan sendiri?
+                  <span class="faq-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </span>
+                </button>
+                <div class="faq-answer">
+                  <div class="faq-answer-inner">
+                    <p>Tentu! Kami menerima <strong>3 opsi formula</strong>: (1) Formula siap pakai dari library kami, (2) Formula semi-custom dari base formula kami, dan (3) Formula full custom sesuai keinginan klien. Untuk kemasan, kami bekerja sama dengan supplier packaging premium namun klien juga bebas menyediakan kemasan sendiri.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Bagaimana cara memulai kerja sama dengan Glowmaklon?
+                  <span class="faq-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </span>
+                </button>
+                <div class="faq-answer">
+                  <div class="faq-answer-inner">
+                    <p>Sangat mudah! Cukup <strong>4 langkah</strong>: (1) Konsultasi gratis via WhatsApp atau form di website kami, (2) Tim kami akan mengirimkan proposal dan penawaran harga, (3) Tanda tangan MoU dan pembayaran DP, (4) Proses produksi dimulai. Kami mendampingi di setiap tahap hingga produk sampai di tanganmu.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Apakah ada garansi kualitas produk?
+                  <span class="faq-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  </span>
+                </button>
+                <div class="faq-answer">
+                  <div class="faq-answer-inner">
+                    <p>Ya, setiap batch produksi melalui serangkaian <strong>quality control ketat</strong> meliputi uji stabilitas, uji keamanan (patch test), uji efektivitas, dan uji mikrobiologi. Kami memberikan <strong>garansi ganti rugi</strong> jika ditemukan cacat produksi yang terbukti berasal dari kesalahan kami dalam proses produksi.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         SECTION 8 — CTA BANNER
+    ════════════════════════════════════════ -->
+    <section class="cta-banner" aria-labelledby="cta-title">
+      <div class="container">
+        <p class="section-label" style="color:rgba(255,255,255,0.8);justify-content:center;margin-bottom:var(--space-4);">
+          Mulai Sekarang
+        </p>
+        <h2 id="cta-title">Siap Membangun Brand<br>Kecantikanmu?</h2>
+        <p>Konsultasi gratis dengan tim ahli kami hari ini. Tidak ada kewajiban, tidak ada biaya tersembunyi — hanya solusi terbaik untuk brand impianmu.</p>
+        <div class="btn-group">
+          <a href="https://wa.me/6281234567890?text=Halo%20Glowmaklon%2C%20saya%20ingin%20konsultasi%20maklon." target="_blank" rel="noopener" class="btn btn-white btn-lg" id="cta-konsultasi-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.16v1.76z"/></svg>
+            Konsultasi Gratis
+          </a>
+          <a href="https://wa.me/6281234567890?text=Halo%20Glowmaklon%2C%20saya%20ingin%20konsultasi%20maklon." class="btn btn-outline-white btn-lg" target="_blank" rel="noopener" id="cta-wa-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Chat WhatsApp
+          </a>
+        </div>
+
+        <!-- Trust indicators -->
+        <div style="margin-top:var(--space-8);display:flex;justify-content:center;gap:var(--space-8);flex-wrap:wrap;" aria-hidden="true">
+          <div style="display:flex;align-items:center;gap:var(--space-2);color:rgba(255,255,255,0.65);font-size:var(--fs-sm);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,255,255,0.65)" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Konsultasi 100% Gratis
+          </div>
+          <div style="display:flex;align-items:center;gap:var(--space-2);color:rgba(255,255,255,0.65);font-size:var(--fs-sm);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,255,255,0.65)" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Respon dalam 1x24 Jam
+          </div>
+          <div style="display:flex;align-items:center;gap:var(--space-2);color:rgba(255,255,255,0.65);font-size:var(--fs-sm);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,255,255,0.65)" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Tanpa Biaya Tersembunyi
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" aria-label="Footer"></footer>
+
+  <!-- SCRIPTS -->
+  <script src="./assets/js/navbar.js"></script>
+  <script src="./assets/js/footer.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Robots.txt for Glowmaklon
+User-agent: *
+Allow: /
+
+# Sitemap Reference
+Sitemap: https://glowmaklon.com/sitemap.xml
